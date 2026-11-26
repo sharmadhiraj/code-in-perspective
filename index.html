@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code in Perspective</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+</head>
+<body>
+<main class="container py-4" style="max-width: 880px">
+  <header class="text-center mb-4">
+    <h1 class="h2"><a href="#/" class="text-reset text-decoration-none">Code in Perspective</a></h1>
+    <p class="text-secondary mb-0">Your code is bigger than you think. See it in perspective.</p>
+  </header>
+
+  <form id="form" class="input-group mb-3">
+    <input id="input" class="form-control" placeholder="owner/repo, owner, or a vs b" aria-label="GitHub repo or user" autocomplete="off">
+    <button class="btn btn-primary" type="submit">Compare</button>
+  </form>
+  <div id="message" class="text-danger mb-3" role="alert"></div>
+
+  <div id="view"></div>
+
+  <footer class="mt-5 small text-secondary">
+    <p>Estimates based on language bytes, not a measure of effort or quality.</p>
+    <ul id="assumptions"></ul>
+    <details>
+      <summary>Rate limited? Add a GitHub token</summary>
+      <p class="mt-2 mb-1">Raises the limit from 60 to 5,000 requests per hour. Create one with no scopes at
+        github.com/settings/tokens. It is stored only in this browser and sent only to api.github.com.</p>
+      <input id="token" type="password" class="form-control form-control-sm" placeholder="ghp_..." autocomplete="off" aria-label="GitHub token">
+    </details>
+  </footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
